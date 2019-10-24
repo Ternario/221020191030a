@@ -1,0 +1,170 @@
+.header {
+    padding: $gap 0;
+
+    @include sm-xs {
+        font-size: 13px;
+    }
+    
+    .header-item {
+        position: relative;
+        display: flex;
+
+        &__pictures {
+            margin: 0  0 0 ($gap * 1.5);
+            z-index: 15;
+            margin: 0  0 0 $gap;
+        }
+
+        &__info {
+            width: 90%;
+
+            .owner {
+                .name {
+                    margin: 0 10px;
+                    font-size: 17px;
+
+                    @include sm-xs {
+                        font-size: 13px;
+                    }
+                }
+            
+                .position {
+                    margin: 0 10px;
+                    font-size: 14px;
+                    color: $color-gray;
+                    padding-bottom: 5px;
+                    color: darken($color-gray, 20%);
+
+                    @include sm-xs {
+                        font-size: 13px;
+                    }    
+                }
+            }
+
+            .owner-description {
+                position: absolute;
+                width: 85%;
+                height: 50%;
+                right: $gap * 2;
+                border-radius: 5px;
+                background-color: $color-yellow;
+                border: 1px solid $color-gray;
+
+                @include md-sm {
+                    left: $gap * 4;
+                }
+
+                @include sm-xs {
+                    width: 70%;
+                    left: $gap * 6;
+                }
+            
+                .description {
+                    position: absolute;
+                    left: $gap * 4;
+                    padding: 5px 0;
+
+                    @include md-sm {
+                        left: $gap * 5.5; 
+                    }
+
+                    @include sm-xs {
+                        left: $gap * 3.5;
+                        padding: 0;
+                    }
+                }
+            }
+        } 
+    }
+
+    .header-container {
+        position: relative;
+
+        .services {
+            display: flex;
+            justify-content: flex-end;
+            margin-right: $gap * 5;
+            margin-bottom: 0;
+            font-size: 15px;
+
+            @include sm-xs {
+                font-size: 13px;
+                margin-right: $gap * 4;
+            }
+        }
+
+        &__bar {
+            display: flex;
+            justify-content: flex-end;
+            margin-right: $gap * 2;
+            padding: 10px;
+
+            @include md-sm {
+                margin-right: $gap * 2.5;
+            }
+
+            .header-bar {
+                width: 54%;
+                margin: 0;
+                border-left: 1px solid $color-blue;
+
+                @include md-sm {
+                    width: 54%;
+                }
+
+                @include sm-xs {
+                    width: 98.5%;
+                }
+
+                .header-progres {
+                    position: relative;
+                    display: flex;
+                    justify-content: space-between;
+                    height: 25px;
+                    margin-right: $gap * 3;
+                    padding: 1px 0;
+
+                    @include md-sm {
+                        margin-right: $gap * 2.5;
+                    }
+
+                    @include sm-xs {
+                        font-size: 13px;
+                        margin-right: $gap * 2;
+                    }
+
+                    .progres-label {
+                        position: absolute;
+                    }
+
+                    &__elem {
+                        border-top-right-radius: 4px;
+                        border-bottom-right-radius: 4px;
+                    }
+                }
+            }    
+        }
+
+        &__result {
+            display: flex;
+            justify-content: flex-end;
+
+            .result {
+                display: flex;
+                justify-content: space-between;
+                width: 44%;
+                margin-right: $gap * 5.5;
+
+                @include md-sm {
+                    margin-right: $gap * 5.5;
+                    width: 42.5%;
+                }
+
+                @include sm-xs {
+                    width: 77.5%;
+                    margin-right: $gap * 4.5;
+                }
+            }
+        }
+    }  
+}

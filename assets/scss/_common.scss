@@ -1,0 +1,22 @@
+body {
+    max-width: 720px;
+    margin: auto;
+    font-family: $font-family;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+hr {
+    width: 51.5%;
+    margin-right: $gap * 2;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: $color-gray;
+
+    @include sm-xs {
+        width: 92%;
+        margin-right: $gap * 1;
+    }
+}
